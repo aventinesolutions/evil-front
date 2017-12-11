@@ -3,4 +3,8 @@
   width: 700px;
   margin: 0 auto;
   overflow: hidden;
+
+  p {
+    color: deeppink;
+  }
 }
