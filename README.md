@@ -21,4 +21,42 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+## Trouble Shooting
+
+* ####Webpack Binary not found by Webpacker Gem
+
+```shell
+# as root
+% yarn global add webpack
+```
+
+```shell
+# in project as yourself
+% bundle exec rails webpacker:binstubs
+```
+
+The binary stubs for `webpacker` and `webpacker-dev-server` can be
+checked into the repository.
+
+After that,  Webpack compilation should work
+
+```shell
+% rake --trace webpackker:compile
+```
+
+* ####Pre-commit Git Hook stops working
+
+(maybe because of changing Node modules)
+
+```shell
+# clobber the Node Modules folder and reinstall
+% rm -rfv node_modules
+% rake --trace yarn:install
+```
+
+Then, remove the Git pre-commit hook:
+```shell
+% cd .git/hooks
+% rm -fv pre-commit
+```
+
