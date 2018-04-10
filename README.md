@@ -41,7 +41,7 @@ checked into the repository.
 After that,  Webpack compilation should work
 
 ```shell
-% rake --trace webpackker:compile
+% rake --trace webpacker:compile
 ```
 
 * ####Pre-commit Git Hook stops working
@@ -59,4 +59,7 @@ Then, remove the Git pre-commit hook:
 % cd .git/hooks
 % rm -fv pre-commit
 ```
+
+* ####Post CSS Syntax and Formatting
+The up-to-date JetBrains plugin for Post CSS must be installed.
 
